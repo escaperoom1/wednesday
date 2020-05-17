@@ -39,15 +39,15 @@
       let password
     </script>
 
-    <title>Escape Room Day 2: Monday</title>
+    <title>Escape Room Day 3: Wednesday</title>
   </head>
 
   <body>
     <div class="tuesdayContainer">
-        <h1>Escape Room Day 2: Tuesday</h1>
+        <h1>Escape Room Day 3: Wednesday</h1>
         <div class="codeContainer">
        
-          <h3>Enter the secret password for Clue 1 in order to access Clue 2.</h3>
+          <h3>Enter the secret password for Clue 2 in order to access Clue 3.</h3>
           <div class="form-container">
             <input id="monday-code" name="monday-code" type="text" class="monday-input"/>
 
@@ -112,8 +112,8 @@
     });
     function openCode1() {
       var code = document.getElementById("monday-code").value;
-      if (code.toLowerCase() === password) {
-           window.location ="https://escaperoom1.github.io/monday/clue-2"
+      if (code.toLowerCase() === password2) {
+           window.location ="https://escaperoom1.github.io/wednesday/clue-2"
            console.log(window.location)
       } else {
         $("#Modal2").modal("show");
