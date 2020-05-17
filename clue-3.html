@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Escape Room Day 2: Monday</title>
+    <title>Escape Room Day 3: Tuesday</title>
     <script src="myscripts.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
@@ -44,53 +44,29 @@
 
   <body>
     <div class="clue-2-container">
-      <h1 class="diningCommonsTitle">The Dining Commons</h1>
+      <h1 class="diningCommonsTitle">The Swimming Pool</h1>
       <br />
-      <h3>
-        Today you are going to decipher the lunch menu for May and unscramble
-        both words and then a final sentence.
-      </h3>
+      <h3></h3>
       <div class="explanation">
-        <ul>
-          <li>
-            You will need to read the story below and determine which days we
-            are referring to within the menu. (HINT: there are 7 different days,
-            and each day has letters circled in purple. Those scrambled letters
-            will create a different word each day. Those 7 words in the correct
-            order are the answer to Clue 2.)
-          </li>
-
-          <br />
-
-          <p>
-            Your teachers miss spending time with you during lunch and recess,
-            but they especially miss eating the delicious food in the Dining
-            Commons! Mrs. Sweigart loves anything with cheese and especially
-            foods she tried when she went with Mrs. Phillips to Mexico! Mrs.
-            Phillips also loves Friday's meal inspired by the same country. Ms.
-            Hirsig prefers Fridays inspired by Italian cuisine. Ms. Blair loves
-            the beef dish accompanied by another "B" veggie. Ms. Hipp prefers
-            Chef Nick's "le petit-dejeuner". Mrs. Gibson really misses her
-            favorite potato soup. Mrs. Brinson loves when chicken fingers are
-            served, but especially when the "treat" is something crispy.
-          </p>
-          <br />
-          <li>
-            You can download the PDF
-            <a href="images/dining-commons.pdf" target="_blank">here.</a>
-          </li>
-        </ul>
+        <p>
+          The pool is getting a makeover this summer and then will be filled
+          with fresh water. Your goal is to make an educated and mathematical
+          guess of how many gallons of water the Madren Pool needs to be
+          completely filled. HINT: There are approximately 7 gallons in a cubic
+          foot. <br /><br />MADREN POOL MEASUREMENTS: Length: 75 feet, Depth: 5
+          feet (average), Width: 25 feet
+        </p>
       </div>
       <div class="menu-img">
         <img
-          src="images/dining-commons-menu.png"
-          width="30%"
-          height="30%"
+          src="images/swimming-pool-empty.jpg"
+          width="70%"
+          height="70%"
           alt="menu"
         />
       </div>
       <div class="codeContainer">
-        <h3>Enter the deciphered sentence below:</h3>
+        <h3>What is the volume of the Madren Pool in gallons?</h3>
         <div class="form-container">
           <input id="monday-code" name="monday-code" type="text" />
 
@@ -123,7 +99,7 @@
             </div>
             <div class="modal-body">
               <p id="rockText" class="hideNow">
-                WE ARE PROUD OF YOU
+                WE MISS YOU
               </p>
               <div
                 id="spinner"
@@ -131,6 +107,13 @@
                 role="status"
                 aria-hidden="true"
               ></div>
+              <br />
+              <img
+                src="images/swimming-pool.jpg"
+                width="80%"
+                height="80%"
+                alt="menu"
+              />
             </div>
 
             <div class="modal-footer">
@@ -200,7 +183,12 @@
     });
     function openCode1() {
       var code = document.getElementById("monday-code").value;
-      if (code === password2) {
+      if (
+        code.toLowerCase() === password3a ||
+        code.toLowerCase() === password3b ||
+        code.toLowerCase() === password3c ||
+        code.toLowerCase() === password3d
+      ) {
         $("#Modal1").modal("show");
         setTimeout(() => {
           document.getElementById("spinner").className = "hideNow";
